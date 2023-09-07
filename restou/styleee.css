@@ -1,0 +1,266 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: blanchedalmond;
+}
+.logo img{
+width: 60px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 40px;
+    background-color: rgb(248, 232, 217);
+    border-bottom: 2px solid rgb(252,196,124);
+    box-shadow: 0 2px whitesmoke;
+}
+.header ul{
+    display: flex;
+    align-items: center;
+}
+
+.header ul li:hover{
+    color: aquamarine;
+}
+.nav ul li{
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.account{
+    flex: 0.1;
+}
+.account ul{
+    display: flex;
+    justify-content: end;
+}
+
+.account ul li{
+    padding: 0 15px;
+    font-size: 18px;
+}
+.search{
+    width: 200px;
+    justify-content: center;
+}
+.search input{
+    width: 100px;
+    outline: none;
+    padding: 5px;
+}
+.searchicon{
+    background-color:lightsalmon;
+    display: block;
+    padding: 4 5px;
+    cursor: pointer;
+}
+.home{
+    background-color: bisque;
+    padding:0 7vw;
+
+}
+.home1{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+.home1 div:nth-child(2){
+    flex:1;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.home1 div:nth-child(1){
+    padding-top: 20px;
+    flex:1;
+    font-size: 30px;
+}
+.home1 div:nth-child(1) p{
+    font-size: 13px;
+    padding: 20px 0;
+}
+.home1 div:nth-child(1) span{
+    color:coral;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: burlywood;
+}
+.red{
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    font-weight: bold;
+    color: aliceblue;
+    line-height: 20px;
+    background-color:coral;
+    border-radius: 5px;
+    border:1px solid coral;
+    box-shadow :0 15px coral;
+    
+}
+.food-items {
+    margin: 70px 0;
+    padding: 20px 0;
+    background-color: blanchedalmond;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.item{
+    width: 250px;
+    padding: 30px;
+    text-align: center;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+
+.item div{
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.item p{
+    font-size: 12px;
+    margin: 15px 0;
+}
+
+.item .white{
+    width:120px;
+    line-height: 35px;
+
+}
+.home2{
+  margin: 80px 0;  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.foodling{
+    flex:0.5;
+
+}
+.foodling img{
+   width: auto;
+
+}
+.question{
+    flex:0.5;
+    flex-direction: column;
+    margin-left: 40px;
+}
+.question h2{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.home3{
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+
+.home4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+
+.feed {
+    flex: 1;
+    padding-right: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.feed h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.feed p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+.chefpic {
+    flex: 1;
+    text-align: right;
+}
+
+.chefpic img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+.footer {
+    background-color: #333;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.logo1 img {
+    width: 60px;
+    height: auto;
+    
+}
+
+
+.address {
+    margin-left: 20px;
+}
+
+.address p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    z-index: 1;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}

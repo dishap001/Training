@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styleee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-reference">
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Booking Form</title>
+    <style>
+     
+     form {
+    height: auto;
+    width: 500px;
+    text-align: center;
+    padding: 40px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(9, 9, 9, 0.1);
+    box-sizing: border-box;
+}
+
+     </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 36px; color: coral;">Culinary Corner</h1>
+    <header>
+       
+        <div class ="header">
+            <div class="logo">
+                <img src="Images/logo.jpg" alt="">
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="Main1.html"><li></i> Home</li></a>
+                    <a href="Aboutus.html"><li>About</li></a>
+                    <a href="booktable.html"><li>Book table</li></a>
+                    <a href="Foodmenu.html"><li>Food Menu</li></a>
+                </ul>
+            </div>
+            <div class="account">
+                <ul>
+                   
+                   <div class="dropdown">
+                    <li><i class="fa-solid fa-user" id="userlap"></i></li>
+                    <div class="dropdown-content">
+                        <a href="Signup.html">Sign Up</a>
+                        <a href="Signin.html">Sign In</a>
+                    </div>
+                </div>
+                </ul>
+            </div>
+        </div>
+    </header>
+        
+        <form class= "form" id="bookingForm"  method="post" onsubmit="Confirmation()">
+            <h2>Table Booking Form</h2><br><br>
+            <label>Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label>Number of People:</label>
+            <input type="text" id="num-people" name="num_people" required><br><br>
+            
+            <label>Date of Booking:</label>
+            <input type="date" id="date" name="date" required><br><br>
+            
+            <label>Timing:</label>
+            <input type="time" id="timing" name="timing" required><br><br>
+            
+            <button class="red">Submit</button><br><br>
+        </form>
+
+    
+    <script>
+        function Confirmation() {
+            
+            var name = document.getElementById("name").value;
+            var numPeople = document.getElementById("num-people").value;
+            var date = document.getElementById("date").value;
+            var timing = document.getElementById("timing").value;
+            
+            var confirmationMessage = `
+                Thank you for booking with us!
+                Booking Details:
+                Name: ${name}
+                Number of People: ${numPeople}
+                Date: ${date}
+                Timing: ${timing}
+            `;
+            alert(confirmationMessage);
+        }
+    </script>
+     <div class="footer">
+        <div class="logo1">
+            <img src="Images/logo.jpg">
+        </div>
+        <div>
+            <address>
+                <p>Email: Culinarycornergoa@gamil.com</p>
+                <p>Owned by: Raj Kapoor</p>
+                <p>Address: Culinery Corner Near Caculo Mall Panjim Goa</p>
+            </address>
+        </div>
+    </div>
+</div>
+</body>
+</html>
