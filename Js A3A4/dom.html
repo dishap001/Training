@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Product Details</p>
+    <input type="text" id="pname" placeholder="Product name">
+    <input type="text" id="pprice" placeholder="Product price">
+    <button onclick="addProduct()">Add Product</button>
+
+    <div id="productlist">
+        <div class="product"><b>Laptop</b> - $50,000
+            <button onclick="deleteProduct(this)">Delete</button>
+        </div>
+        <div class="product"><b>Cellphone</b> - $20,000
+            <button onclick="deleteProduct(this)">Delete</button>
+        </div>
+    </div>
+
+    <script>
+        function addProduct() {
+            var pname = document.getElementById("pname").value;
+            var pprice = document.getElementById("pprice").value;
+
+            if (pname && pprice) {
+                var pelement = document.createElement("div");
+                pelement.classList.add("product");
+                pelement.innerHTML = `<b>${pname}</b> - $${pprice}`;
+
+                var deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.addEventListener("click", function() {
+                    deleteProduct(deleteButton);
+                });
+
+                pelement.appendChild(deleteButton);
+
+                var productList = document.getElementById("productlist");
+                productList.appendChild(pelement);
+            }
+        }
+
+        function deleteProduct(button) {
+            var productDiv = button.parentElement;
+            productDiv.remove();
+        }
+    </script>
+</body>
+</html>

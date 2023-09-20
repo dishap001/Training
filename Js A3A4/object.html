@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var product = {
+            id: 1,
+            name: "Laptop",
+            description: "It's a Lenovo Intel Core Processor laptop",
+            price: 40000
+        };
+
+        function display(product) {
+            document.write("Product ID: " + product.id + "<br>");
+            document.write("Product Name: " + product.name + "<br>");
+            document.write("Product Description: " + product.description + "<br>");
+            document.write("Product Price: $" + product.price.toFixed(2) + "<br>");
+        }
+
+        function discount(product, percentage) {
+            var discountAmount = (percentage / 100) * product.price;
+            var discountedPrice = product.price - discountAmount;
+
+            document.write("<br>Original Product Price: $" + product.price.toFixed(2) + "<br>");
+            document.write("Discounted Product Price (" + percentage + "% off): $" + discountedPrice.toFixed(2) + "<br>");
+            document.write("Discount Amount: $" + discountAmount.toFixed(2) + "<br>");
+        }
+
+        display(product);
+        discount(product, 20);
+    </script>
+</body>
+</html>
