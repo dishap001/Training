@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, { useState, createContext } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Navbar';
+import Menu from './pages/menu'; 
+import Aboutus from './pages/aboutus';
+import Home from './pages/Home';
+import Forms from './components/Forms';
+import Profile from './pages/Profile';
 
-function App() {
+export const AppContext = createContext();
+
+const App = () => {
+  const [username, setUsername] = useState('Disha');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppContext.Provider value={{ username, setUsername }}>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/Forms" element={<Forms />} />
+            <Route path="/aboutus" element={<Aboutus />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
+        </Router>
+      </AppContext.Provider>
     </div>
   );
-}
+};
 
 export default App;

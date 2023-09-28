@@ -36,3 +36,66 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.addTask {
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.addTask input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.addTask button {
+  width: 100%;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.addTask button:hover {
+  background-color: darkblue;
+}
+
+.list h1 {
+  color: blue;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.nav-links {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.nav-links a {
+  text-decoration: none;
+  margin-right: 10px; 
+}
+
+.link-space {
+  margin-right: 10px;
+}
