@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Set 3</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            border: 2px solid black;
+            padding: 20px;
+ 
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: whitesmoke;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form {
+            margin-bottom: 15px;
+        }
+        label {
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] ,
+        input[type="reset"]{
+            display: block;
+             margin: 0 auto;
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .text-format{
+            display: inline;
+            margin-right: 20px;
+        }
+        .textformat-1 {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: blue;
+        }
+        .textformat-2 {
+            font: italic 24px "Times New Roman", serif;
+        }
+        .textformat-3 {
+            text-align: left;
+        }
+        .textformat-4 {
+            text-align: center;
+        }
+        .textformat-5 {
+            text-align: right;
+        }
+        .textformat-6 {
+            text-decoration: underline;
+        }
+
+        .textformat-7 {
+            text-decoration: line-through;
+        }
+
+        .textformat-8 {
+            text-decoration: overline wavy coral;
+        }
+        .textformat-9 {
+            text-indent: 30px;
+        }
+        .textformat-10 {
+            letter-spacing: 10px;
+        }
+
+        .textformat-11 {
+            line-height: 2;
+        }
+        .textformat-12 {
+            word-spacing: 10px;
+        }
+        .textformat-13 {
+            white-space: nowrap;
+        }
+
+        .font-format-1 {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+            text-transform: uppercase;
+        }
+        .font-format-2 {
+            font: italic 18px "Times New Roman", serif;
+            color: #ff5733;
+        }
+        .font-format-3 {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            color:violet;
+        }
+        .google-font-1 {
+            font: 400 24px 'Lato', Arial, sans-serif;
+            color:blue;
+        }
+        .google-font-2 {
+            font: 700 24px 'Montserrat', Helvetica, sans-serif;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!--Q1 and 2-->
+    <div class="container">
+        <h1>User Registration Form</h1>
+        <form action="" method="post">
+            <div class="form">
+                <label >Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label >Age:</label>
+                <input type="number" id="age" name="age" required min="18" max="99"><br><br>
+                <label >Date of Birth:</label>
+                <input type="date" id="birthDate" name="birthDate" required><br><br>
+                <label >Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label >Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label >Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label >Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label >Other</label><br><br>
+                <label >Languages:</label>
+                <input type="checkbox" id="english" name="languages[]" value="English">
+                <label >English</label>
+                <input type="checkbox" id="marathi" name="languages[]" value="Marathi">
+                <label >Marathi</label>
+                <input type="checkbox" id="hindi" name="languages[]" value="Hindi">
+                <label >Hindi</label><br><br>
+                <label >State:</label>
+                <select id="state" name="state">
+                    <option value="Goa">Goa</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Karnataka">Karnataka</option>
+                </select><br><br>
+                <label >linkedIn Link:</label>
+                <input type="url" id="url" name="url" required><br><br>
+             
+                <label >Upload File:</label>
+                <input type="file" id="file" name="file" >
+    
+                <br><br>
+                <label >Hobbies:</label>
+                <textarea id="hobbies" name="hobbies"></textarea><br><br>
+                <input type="submit" value="Submit"><br><br>
+                 <input type="reset" value="Reset">
+            </div>
+            
+        </form>
+    </div>
+     <!--Q3-->
+    <div class="text-format">
+        <p class="textformat-1">Text Properties</p>
+        <p class="textformat-2">This line shows font shorthand property</p>
+        <p class="textformat-3">Left-aligned</p>
+        <p class="textformat-4">Center-aligned</p>
+        <p class="textformat-5">Right-aligned</p>
+        <p class="textformat-6">Underlined</p>
+        <p class="textformat-7">Strikethrough</p>
+        <p class="textformat-8">Overlined & Wavy</p>
+        <p class="textformat-9"> This text has an indent of 20px.</p>
+        <p class="textformat-10">This text has increased letter spacing.</p>
+        <p class="textformat-11">This text has adjusted line height.</p>
+        <p class="textformat-12">This text has increased word spacing.</p>
+        <p class="textformat-13">This text has nowrap white space.</p>
+    </div>
+    <!--Q4-->
+    <div>
+        <p class="font-format-1">Font Properties</p>
+        <p class="font-format-2">Font Shorthand</p>
+        <p class="font-format-3">Google Fonts with Fallbacks</p>
+        <p class="google-font-1">Text using Google Font 'Lato' with fallbacks</p>
+        <p class="google-font-2">Text using Google Font 'Montserrat' with fallbacks</p>
+    </div>
+    <!--Q5-->
+    <div>
+        <p>What is the precision for numbers?</p>
+        <p>The precision for numbers in CSS is typically up to 15-17 significant digits. The precision for numbers means how accurately you can specify decimal numbers.
+             It's like how many digits you can use after the decimal point. CSS allows you to use numbers with up to 15-17 significant digits after the decimal point. </p>
+        <p>How to fix these issues?</p>
+        <ul>
+            <li>Round Numbers: If you have numbers with too many decimal places, round them to a reasonable level of precision.</li>
+            <li>Use Whole Numbers: Sometimes, using whole numbers (no decimals) is a good solution.</li>
+            <li>Avoid Unnecessary Precision: Don't use more decimal places than needed.</li>
+        </ul>
+    </div>
+    <!--Q6-->
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <script>
+        var a = 0.1;
+        var b = 0.19;
+        var result1 = (a + b).toFixed(2);
+        var result2 = "0.10" * "10" + "2" / "0.9" - "0.67";
+
+        var a = 1;
+        var b = 1;
+        var y = new Number(1); 
+        var z = new Number(1);
+
+        document.write("Result of the calculation " + a + " + " + b + " is: " + result1);
+    
+        document.write( "<br><br>" +"0.10 * 10 + 2 / 0.9 - 0.67 = "+ result2);
+        document.write("<br><br>"+" a==b ");
+        document.write(a == b); 
+        document.write("<br>"+ "a===b ");
+        document.write(a === b); 
+        document.write("<br>"+"a==y ");
+        document.write(a == y); 
+        document.write("<br>"+ "a===y ");
+        document.write(a === y); 
+        document.write("<br>" +"y==z ");
+        document.write(y == z); 
+        document.write("<br>" + "y===z ");
+        document.write(y === z);
+        document.write("<br>");
+
+        var a = Number.EPSILON;
+        document.write("EPSILON: " + a + "<br>");
+
+        var b = Number.MAX_VALUE;
+        document.write("MAX_VALUE: " + b + "<br>");
+
+        var c = Number.MIN_VALUE;
+        document.write("MIN_VALUE: " + c + "<br>");//number.epsilon
+
+        var d = Number.MAX_SAFE_INTEGER;
+        document.write("MAX_SAFE_INTEGER: " + d + "<br>");//math.pow(2,53) -1
+
+        var e = Number.MIN_SAFE_INTEGER;
+        document.write("MIN_SAFE_INTEGER: " + e + "<br>");//-math.pow(2,53) -1
+
+        var f = Number.POSITIVE_INFINITY;
+        document.write("POSITIVE_INFINITY: " + f + "<br>");// -1/0
+
+        var g = Number.NEGATIVE_INFINITY;
+        document.write("NEGATIVE_INFINITY: " + g + "<br>");//1/0
+
+        var num = 10;
+        var str = num.toString();//: Returns a number as a string.
+
+        var num = 4335.4354;
+        var exp = num.toExponential();//: Returns a number written in exponential notation.
+
+        var num =2342.4234;
+        var fixed = num.toFixed(2);// Returns a number written with a specified number of decimals.
+
+        var num = 4342.3424;
+        var precision = num.toPrecision(4); //Returns a number written with a specified length.
+
+        var num = new Number(10);
+        var primitive = num.valueOf();//Returns the primitive value of a Number object.
+
+        //how are these different from resective global methods??
+        //When you use these methods on a Number object, you call them directly on the object, like numberObject.toString(). 
+        //These methods operate on the value stored within the Number object.
+    </script>
+</body>
+</html>
